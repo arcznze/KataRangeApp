@@ -4,7 +4,7 @@ string sinput;
 string resultado;
 bool booleano;
 
-Console.WriteLine("Que desea hacer?");
+Console.WriteLine("¿Qué desea hacer?");
 Console.WriteLine("1. Get all points.");
 Console.WriteLine("2. Get endpoints.");
 Console.WriteLine("3. Contains.");
@@ -25,16 +25,25 @@ switch (opcion)
         Console.WriteLine(resultado);
         break;
     case 3:
-        Console.WriteLine("Escriba un segundo rango: ");
+        Console.WriteLine("Escriba un intervalo: ");
         sinput = Console.ReadLine();
         booleano = r1.Contains(input, sinput);
         Console.WriteLine(booleano);
         break;
     case 4:
+        Console.WriteLine("Escriba un segundo rango: ");
+        sinput = Console.ReadLine();
+        booleano = r1.ContainsRange(input, sinput);
+        Console.WriteLine(booleano);
         break;
     case 5:
+        Console.WriteLine("Escriba un segundo rango a comparar: ");
+        sinput = Console.ReadLine();
+        booleano = r1.Equals(input, sinput);
+        Console.WriteLine(booleano);
         break;
     default:
+        Console.WriteLine("No ingresó una opción válida.");
         break;
 }
 
