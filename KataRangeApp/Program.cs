@@ -46,4 +46,4 @@ switch (opcion)
         Console.WriteLine("No ingresó una opción válida.");
         break;
 }
-
+Console.ReadKey();
